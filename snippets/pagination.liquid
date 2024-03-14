@@ -7,11 +7,11 @@
         {% endif %}
         {% for part in pagination.parts %}
             {% if part.is_link %}
-                <a class="px-8 py-3 border border-gray-600 bg-gray-600 text-white mx-1 rounded-sm font-medium" href="{{part.url}}">
+                <a class="px-8 py-3 border border-gray-600 hover:bg-gray-600 hover:text-white mx-1 rounded-sm font-medium" href="{{part.url}}">
                     {{part.title}}
                 </a>
                 {% else %}
-                    <span class="px-8 py-3 border border-gray-600 text-gray-600 hover:bg-gray-600 hover:text-white mx-1 rounded-sm font-medium" >{{part.title}}</span> 
+                    <span class="px-8 py-3 border border-gray-600 bg-gray-600 text-white mx-1 rounded-sm font-medium" >{{part.title}}</span> 
             {% endif %}
         {% endfor %}
         {% if pagination.next %}
